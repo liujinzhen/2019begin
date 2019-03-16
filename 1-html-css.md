@@ -203,7 +203,7 @@
 	- hidden  超出隐藏
 	- auto  自动添加滚动条
 	- scroll 硬添加  不常用
-	- overflow: auto;
+	- overflow: auto 需要添加时自动添加;
 
 
 + text-align  文字排版方式
