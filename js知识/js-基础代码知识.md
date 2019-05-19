@@ -17,14 +17,13 @@
 **一行代码结束 一定要加; 分号是给js解析器解析用的**
 
 ```
-<script>
+
 	// confirm 返回了两种状态 boolean 布尔类型 true/false
 		if(confirm('你确定要走?')){
 			alert('你走吧,永远不要回来!');
 		}else{
 			alert('咱们结婚吧!');
 		}
-		</script>
 ```
 
 **document.write('这是一段话...'); 输出的是一段话**
@@ -32,7 +31,7 @@
 **变量是用var声明的 名称随便起**
 
 ```
-<script>
+
 		// 字符串类型
 		var str = '今天天不错!';
 		// 在算术里  = 计算结果的 
@@ -44,23 +43,22 @@
 		var var = '张三' ;  关键词 ; 关键词不是绝对性词汇(left/red)
 		// var Str = '今天不错啊!';  严格区分大小写的
 		console.log(str);
-		</script>
-```
 
 ```
-<script>
+
+
 		var name = '张三';
 		var age = 20;
 		// typeof 可以判断 "基本数据类型"
 		console.log(typeof  name);  // string
 		console.log(typeof  age);  // number
-		</script>
+		
 ```
 
 **// +  -  *   /   %(求余)**
 
 ```
-<script>
+
 		console.log(1+2);
 		注意: 
 			+  1. 字符串+num ==> 拼接为字符串
@@ -69,13 +67,13 @@
 			-  4. 字符串类型number - 字符串类型number ==> number
 			-  5. num-字符串(非number) ==> NaN(not  a  number);而且NaN!=NaN
 			/  6.  1/0 = Infinity   无限大 
-		</script>
+		
 ```
 
 **基础语法都是ECMAScript**
 
 ```
-<script>
+
 	1. 基本数据类型
 		String Number  boolean  undefined  null
 	2. 变量声明
@@ -102,11 +100,8 @@
 		注意: a++ 是先参与使用,后++
 			  ++a  是先执行++,再参与使用
 	7.在程序里,包含了一部分属性和功能的集合,我们称之为对象.
-	</script>
-```
+	
 
-```
-<script>
  		Math对象和Date对象不同的是 Math里的都是静态方法,不需要new
 		// 1.天花板函数 向上取整
 		console.log(Math.ceil(2.1));  // 3
@@ -123,7 +118,7 @@
  		console.log('15-31之间随机值: ',Math.floor(Math.random()*17+15));
  		// 8. Math.pow(x,y)
  		// 9. Math.round(x) 四舍五入 但是不推荐使用
- 		</script>
+ 	
 ```
 
 **从输入框获取的都是字符串类型**
@@ -131,41 +126,41 @@
 **如果是通过对"枚举类型"的判断,用switch比较清晰**
 
 ```
-<script>
-		switch (parseInt(fruitNum)) { 
-			case 1:
-				alert('苹果');
-				break;
-			case 2:
-				alert('香蕉');
-				break;
-			default:
-				alert('没有这个编号!');
-				break;
-				</script>
+
+	switch (parseInt(fruitNum)) { 
+		case 1:
+			alert('苹果');
+			break;
+		case 2:
+			alert('香蕉');
+			break;
+		default:
+			alert('没有这个编号!');
+			break;
+				
 ```
 
 **while用法**
 
 ```
-<script>
+
 		var num = 1;
 		//需要有跳出条件
 		while (num < 10) {
 			console.log('num==>',num);
 			num ++ ;
 		}
-		</script>
+		
 ```
 
 **dowhile用法**
 
 ```
-<script>
+
 	do{
 			console.log('num2==>',num);
 		}while(num!=1)
-		</script>
+	
 ```
 
 **for循环**
@@ -175,7 +170,7 @@
 	- 嵌套循环 : 内部的变量不能和外部一样 
 
 ```
-<script>
+
 		var num = 10;
 		// 遍历0~99
 		// 如果存在 i == num 结束循环
@@ -189,7 +184,7 @@
 			console.log('么么哒!');
 		}
 		console.log('end  for....');
-		</script>
+	
 ```
 
 **continue;结束本次循环,后面的代码不再执行**
@@ -198,7 +193,7 @@
 **数组和下标**
 
 ```
-<script>
+
 // 1.通过对象形式创建数组
 		var arr = new Array();
 		// 数组的下标是从0开始的
@@ -215,13 +210,13 @@
 		// arr 是一个对象  xx.abc  abc是xx的属性;  xx.def() def是xx的方法
 		console.log('数组的length==>',arr2.length);
 		// jqx.name;  jqx.run();
-		</script>
+	
 ```
 
 **for ... in用法**
 
 ```
-<script>
+
 // 数组里面的值 可以是任意类型
 		// 但是最好是同一类数据
 		var arr = [1,3,12,34,7];
@@ -234,14 +229,14 @@
 		for(var a in arr){
 			console.log(arr[a])
 		}
-		</script>
+		
 ```
 
 
 **拼接 转换 打断**
 
 ```
-<script>
+
 		var arr = [1,2,3];
 		var arr2 = [4,5,6];
 		// 1. concat() 拼接 并不会影响原来的数组
@@ -261,13 +256,13 @@
 		for(var i = 0 ;i < codeArr.length ; i++){
 			console.log(codeArr[i]);
 		}
-		</script>
+	
 ```
 
 **push unshift pop shift的使用**
 
 ```
-<script>
+
 		var arr = [1,2,3];
 		// 1. push()   从后面推进去一个新元素
 		// 2. unshift()  从数组的前面放入一个新元素
@@ -279,13 +274,13 @@
 		console.log(arr);
 		arr.pop();
 		console.log(arr);
-		</script>
+	
 ```
 
 **冒泡排序（Bubble Sort），是一种计算机科学领域的较简单的排序算法。它重复地走访过要排序的元素列，依次比较两个相邻的元素，如果他们的顺序（如从大到小、首字母从A到Z）错误就把他们交换过来。走访元素的工作是重复地进行直到没有相邻元素需要交换，也就是说该元素已经排序完成。**
 
 ```
-<script>
+
 		var arr = [8,5,4,3,2];
 	    for(var j = 1 ; j < arr.length ; j ++){
 	    	for(var i = 0 ; i < arr.length-j ; i++){
@@ -299,13 +294,13 @@
     		console.log('第'+j+'轮的结果',arr);
 	    }
 	    console.log('最终结果',arr);
-	    </script>
+	
 ```
 
 **选择排序（Selection sort）是一种简单直观的排序算法。它的工作原理是每一次从待排序的数据元素中选出最小（或最大）的一个元素，存放在序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到全部待排序的数据元素排完。 选择排序是不稳定的排序方法。**
 
 ```
-<script>
+
 	var arr = [1,8,5,7,4,3,2];
 		// 0 1 2 3 4 
 		for(var j = 0 ; j < arr.length-1 ; j++){
@@ -328,20 +323,20 @@
 			console.log(arr);
 		}
 		console.log('最终结果为:',arr);
-		</script>
+	
 ```
 
 **求平均值**
 
 ```
-<script>
+
 	var arr = [33,21,1,40,12,5] 
 		var sum = 0 ;
 		for(var i = 0 ; i < arr.length ; i++){
 			sum += arr[i];
 		}
 		console.log(sum/arr.length);
-		</script>
+	
 ```
 
 **函数如果不调用是不会执行的**
@@ -361,7 +356,7 @@
 		run();
 	- 平时用那种?  自定义
 ```
-<script>
+
 		function add (x,y) {
 			// alert(x+y);
 			// 返回函数的执行结果 可以外部使用
@@ -374,7 +369,7 @@
 		alert(sum);
 		// 打印3,5的结果
 		console.log(sum);
-		</script>
+	
 ```
 
 **script标签可以认为是js的window对象**
@@ -384,7 +379,7 @@
 	- 在window作用域不能调用函数内部的变量
 
 ```
-<script>
+
 		var name = '张三';
 		function say () {
 			var age = 20;
@@ -396,7 +391,7 @@
 		say();
 		// alert(age);
 		run();
-		</script>
+
 ```
 
 ***
@@ -412,14 +407,14 @@
 ***面积和周长的计算  Math.PI=3.1415926...***
 
 ```
-<script>
+
 		function  area(r) {
 			return Math.PI*Math.pow(r,2);
 		}
 		function length(r){
 			return 2*Math.PI*r;
 		}
-</script>
+
 ```
 
 + 三元表达式
@@ -429,7 +424,7 @@
 ***求一组数中的最大值和最小值(先排序)***
 
 ```
-<script>
+
 		var arr = [3,5,7,0,1,20];		
 		alert(getMax(arr));
 		function getMax (arr) {
@@ -442,7 +437,7 @@
 			console.log('max==>',arr[maxIndex]);
 			return arr[maxIndex];
 		}
-		</script>
+
 ```
 
 ***
@@ -450,7 +445,7 @@
 
 + 方法1
 ```
-<script>
+
 		var arr = ['a','b','c','d','e'];
 		function reverse (arr) {
 			// 数组是先进后出
@@ -462,12 +457,12 @@
 			return arr2;
 		}
 		console.log(reverse(arr));
-		</script>
+
 ```
 
 + 方法2	
 ```	
-<script>
+
 		function reverse2(arr){
 			for(var i = 0 ; i < Math.floor(arr.length/2) ; i++){
 				var temp = arr[i];
@@ -477,13 +472,13 @@
 			return arr;
 		}
 		console.log(reverse2(arr));
-		</script>
+	
 ```
 
 **求5的阶乘**
 
 ```
-<script>
+
 		function jcDg(n){
 			if(n==1){
 				return 1;
@@ -493,7 +488,7 @@
 		//递归  不适合很大的数 会造成内存溢出
 		// alert(jc(5));
 		alert(jcDg(5));
-		</script>
+
 ```
 			
 + 递归  
@@ -505,7 +500,7 @@
 **求1!+2!+3!+....+n!**
 
 ```
-<script>
+
 		function jc (n) {
 			//跳出条件
 			if(n==1){
@@ -522,13 +517,13 @@
 		}
 		// 1+1*2+1*2*3+1*2*3*4+120
 		alert(jcSum(5));
-		</script>
+	
 ```
 
 **素数 只能被1和自己整除的数**
 
 ```
-<script>
+
 		function  isSu (n) {
 			//标记法
 			var flag = true;
@@ -543,7 +538,7 @@
 			return flag;
 		}
 		alert(isSu(923));
-		</script>
+
 ```
 
 **有一对兔子，从出生起后第3个月起每个月都生一对兔子，小兔子长到第三个月后每个月又生一对兔子， 假如兔子都不死，问第二十个月的兔子对数为多少？ 不死神兔**
@@ -560,7 +555,7 @@
 		// 1.递归
 
 ```
-<script>
+
 		function fb (n) {
 			if(n==1 || n==2){
 				return 1;
@@ -574,7 +569,7 @@
 		// 4  fb(4)  fb(3)+fb(2)
 		// ...
 		// n  fb(n)  fb(n-1)+fb(n-2)	
-		</script>	
+	
 ```
 
 
@@ -587,7 +582,7 @@
 + 获取年月日 字符串类型
 
 ```
-<script>
+
 		var dateStr = prompt('请输入年月日: ','2019-01-24');
 		alert('您输入的日期: '+dateStr+'在当前年份属于第'+getDayCount(dateStr)+'天');
 		function getDayCount(dateStr){
@@ -622,21 +617,21 @@
 			// }
 			return year%400==0 || (year%100!=0&&year%4==0);
 		}
-		</script>
+		
 ```
 
 ```
-<script>
+
 		function say () {
 			alert('Hi my name is zhangsan!');
 		}
 		// say 本质是函数体
 		console.log(say);
-		</script>
+
 ```
 
 ```
-<script>	
+
 		var num1 = 10;
 		var num2 = 20;
 		// 形参就相当于 函数的局部变量
@@ -646,23 +641,23 @@
 		function sub(num1,num2){
 			return num1-num2;
 		}
-		</script>
+
 ```
 
 **如果只需要封装一个代码块  只需要执行一次 那么不需要变量名**
 
 + 自执行函数前面加分号. 原因:如果进行压缩,代码不会连在一起
 ```
-<script>
+
 		;(function(){
 			console.log('hello,world!');
 		})();
-		</script>
+	
 ```
 
 
 ```
-<script>
+
 		function foo (name,fn) {
 			alert(name+ '啦啦啦');
 			fn(name);
@@ -674,5 +669,5 @@
 		// 函数体 本身也能作为参数传递,这种称之为 回调函数(了解)
 		// 在处理异步的情况使用最多
 		foo('张三',bar);
-</script>
+
 ```
